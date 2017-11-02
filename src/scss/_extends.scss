@@ -1,0 +1,13 @@
+%main-header-styling {
+  display: block;
+  font-size: 62px;
+  text-transform: none;
+}
+
+%navigation-color-styling {
+  &:nth-child(1) { border-color: #EAC67A; }
+  &:nth-child(2) { border-color: #A52D39; }
+  &:nth-child(3) { border-color: #EA723C; }
+  &:nth-child(4) { border-color: #67953F; }
+  &:nth-child(5) { border-color: #6BAEBE; }
+}

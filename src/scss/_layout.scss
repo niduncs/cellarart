@@ -1,0 +1,333 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.layout-header {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 10px 0;
+  width: 100%;
+
+  h1 { @extend %main-header-styling; }
+}
+
+.layout-content-wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  font-size: 0;
+
+  .layout-content,
+  .layout-navigation {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .layout-navigation {
+    width: 20%;
+
+    .navigation {
+      display: block;
+      width: 100%;
+
+      li {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        transition: border-left 0.3s linear;
+        padding: 10px 15px;
+        text-transform: uppercase;
+
+        &:hover,
+        &.active {
+          @extend %navigation-color-styling;
+          border-left: 4px solid;
+        }
+
+      }
+    }
+  }
+
+  .layout-content {
+    width: 80%;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h2,
+    p {
+      padding: 10px 15px;
+    }
+
+    img {
+      float: right;
+      padding: 5px;
+    }
+
+    p:first-of-type,
+    p:last-of-type {
+      margin-bottom: 15px;
+    }
+
+    .contact-information-container {
+      display: block;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+
+    .contact-information-key {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 20px;
+      width: 15%;
+
+      &:not(:first-child) { margin-top: 15px; }
+    }
+
+    .contact-information-key,
+    .contact-information-value,
+    address,
+    form {
+      display: inline-block;
+    }
+
+    form,
+    address {
+      vertical-align: top;
+    }
+
+    address {
+      line-height: 1.8;
+    }
+
+    .contact-information-value {
+      vertical-align: middle;
+    }
+
+    .contact-information-email-form {
+      width: 80%;
+
+      label,
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      input,
+      textarea {
+        margin-bottom: 15px;
+      }
+
+      textarea {
+        height: 200px;
+        resize: none;
+      }
+    }
+
+    .exhibits-header {
+      font-size: 18px;
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+
+    .exhibits {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 0;
+
+      .exhibit-container {
+        display: block;
+        background-color: lighten(#333, 5%);
+        width: 45%;
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px;
+        transition: background-color 0.3s linear;
+        border-radius: 20px;
+
+        &:hover { background-color: lighten(#333, 10%); }
+
+        .exhibit-title {
+          font-size: 16px;
+          text-transform: uppercase;
+          word-wrap: normal;
+        }
+
+        ul {
+          padding-right: 10px;
+          margin-top: 10px;
+
+          li {
+            margin-bottom: 5px;
+
+            a {
+              color: #67953F;
+              transition: text-decoration 0.3s linear;
+
+              &:hover { text-decoration: underline; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-container {
+  display: block;
+  width: 100%;
+}
+
+.gallery-content {
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s linear;
+  overflow: hidden;
+
+  &.active {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.popup-gallery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+
+  a {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.tabs {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+
+  li {
+    display: inline-block;
+    background-color: lighten(#333, 5%);
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+  }
+}
+
+
+.main-navigation {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(216, 216, 216, 0.4);
+
+  .navigation {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      font-size: 18px;
+      transition: border-bottom 0.3s linear;
+      padding: 10px 15px;
+      text-transform: uppercase;
+
+      &:hover {
+        @extend %navigation-color-styling;
+        border-bottom: 7px solid;
+      }
+
+    }
+  }
+}
+
+.main-header{
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-header-inner,
+.main-content,
+.navigation {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.main-header {
+  position: relative;
+  background: {
+    image: url(http://www.cellarart.ca/new-site/app/img/animal-crackers1.JPG);
+    position: 50% 30%;
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  .main-header-inner {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translateY(-50%);
+    display: block;
+    width: auto;
+    padding: 25px;
+
+    h1 { @extend %main-header-styling; }
+  }
+
+}
+
+.main-content {
+  padding: 25px;
+  font-size: 0;
+
+  .main-content-nav {
+    display: inline-block;
+    width: 25%;
+  }
+
+  .main-content-slider {
+    display: inline-block;
+    width: 75%;
+    font-size: 16px;
+  }
+}

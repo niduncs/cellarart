@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400);
+
+body {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.sub-text {
+  display: block;
+  font-size: 32px;
+}
+
+.header-highlight,
+.sub-text {
+  .about & { color: #A52D39; }
+  .contact & { color: #6BAEBE; }
+  .exhibits & { color: #67953F; }
+  .gallery & { color: #EA723C;}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}

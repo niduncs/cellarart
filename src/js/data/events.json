@@ -1,0 +1,26 @@
+{
+    "upcoming": [
+        {
+            "title": "something",
+            "dates": "something else",
+            "website": "",
+            "link_text": ""
+        }
+    ],
+    "ongoing": [
+        {
+            "title": "something",
+            "dates": "something else",
+            "website": "",
+            "link_text": ""
+        }
+    ],
+    "past": [
+        {
+            "title": "something",
+            "dates": "something else",
+            "website": "",
+            "link_text": ""
+        }
+    ]
+}
