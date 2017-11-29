@@ -17,7 +17,6 @@ then she has traveled extensively in Canada, the USA, and Central America taking
  with new techniques, media, and designs. Dale loves to expand her scope and explore new dimensions with other fellow artists along 
  the way. She has studied and honed her skills with many internationally known artists, teachers, and local painters.
       </p>
-      {{pageData}}
     </section>
   </template>
 
@@ -39,7 +38,8 @@ then she has traveled extensively in Canada, the USA, and Central America taking
         }
       },
       mounted() {
-        this.getStuff();
+        this.pageData = this.getStuff();
+        console.log(this.pageData);
       }
     }
     

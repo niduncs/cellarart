@@ -51,6 +51,8 @@ module.exports = {
     extractSass
   ],
   devServer: {
-    open: true
+    open: true,
+    openPage: '',
+    hot: true
   },
 };
